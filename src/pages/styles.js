@@ -77,7 +77,7 @@ export const DetailMethods = styled.div`
 `
 
 export const MainButton = styled.button`
-  background: #40433d;
+  background: #40423d;
   color: #fff;
   font-size: 15px;
   padding: 13px;
