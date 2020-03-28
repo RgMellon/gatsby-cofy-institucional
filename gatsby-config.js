@@ -3,7 +3,7 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-const siteMetadata = require("./config/metadata")
+const siteMetadata = require('./config/metadata')
 
 module.exports = {
   siteMetadata,
@@ -38,6 +38,20 @@ module.exports = {
         theme_color: `#40433D`,
         display: `standalone`,
         icon: `src/assets/icon.png`,
+      },
+    },
+    {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {
+        displayName: process.env.NODE_ENV !== 'production',
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-page-creator`,
+      options: {
+        path: `${__dirname}/src/pages`,
+        ignore: [`**/styles.js`],
       },
     },
     `gatsby-plugin-sitemap`,
